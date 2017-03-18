@@ -25,8 +25,9 @@ SECRET_KEY = '!ph!*x5u#4ofs77&5($zgfhy@iiocnxq=a=t^tiu6$ea*_5zzk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# 서버는 여려개의 도메인을 가질 수 있는데, 그 중에 허용할 도메인을 입력
+# ALLOWED_HOSTS = ['f1ee182d.ngrok.io']
+ALLOWED_HOSTS = ['*'] # 모든 도메인에 대해서 허용
 
 # Application definition
 
