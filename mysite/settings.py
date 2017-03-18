@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*'] # 모든 도메인에 대해서 허용
 # Application definition
 
 INSTALLED_APPS = [
+    'dojo',
     'blog',
     'django.contrib.admin',
     'django.contrib.auth',
