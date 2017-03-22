@@ -9,6 +9,11 @@ def lnglat_validator(value):
         raise ValidationError('Invalid LngLat Type')
 
 class Post(models.Model):
+    STATUS_CHOICES = (
+        ('d', 'Draft'),
+        ('p', 'Published'),
+        ('w', 'Withdrawn')
+    )
     author = models.CharField(max_length=50)
     title = models.CharField(max_length=100, help_text='최대 100자 내로 입력가능합니다.'
     # choices = (
@@ -24,5 +29,6 @@ class Post(models.Model):
     lnglat = models.CharField(max_length=50, blank=True,
         validators = [lnglat_validator], # 함수를 넘겨서 유효성 검사 실행
         help_text='경도, 위도 포맷으로 입력')
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True) # 해당 레코드 생성시 현재 시간 자동저장
     updated_at = models.DateTimeField(auto_now=True) # 해당 레코드 갱신시 현재 시간 자동저장
