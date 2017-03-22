@@ -42,4 +42,5 @@ class PostListView3(View):
 post_list3 = PostListView3.as_view()
 
 class ExcelDownloadView(View):
+    #TODO : 직접 구성해 보세요
     pass

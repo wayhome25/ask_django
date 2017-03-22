@@ -18,10 +18,10 @@ def hello(request, name, age):
 def post_list1(request):
     name = '공유'
     return HttpResponse('''
-    <h1> hello, </h1>
-    <p>{name}</p>
-    <p>반가워요</p>
-    '''.format(name=name))
+                        <h1> hello, </h1>
+                        <p>{name}</p>
+                        <p>반가워요</p>
+                        '''.format(name=name))
 
 
 def post_list2(request):
