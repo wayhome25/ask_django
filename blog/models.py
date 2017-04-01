@@ -25,5 +25,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True) # 해당 레코드 생성시 현재 시간 자동저장
     updated_at = models.DateTimeField(auto_now=True) # 해당 레코드 갱신시 현재 시간 자동저장
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return self.title
