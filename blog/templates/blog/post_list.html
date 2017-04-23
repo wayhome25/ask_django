@@ -14,10 +14,10 @@
     {% if user.is_authenticated %}
       <li>{{user}}님 안녕하세요!</li>
       <li><a href="{% url 'profile' %}">프로필</a></li>
-      <li><a href="{% url 'logout' %}">로그아웃</a></li>
+      <li><a href="{% url 'logout' %}?next={{request.path}}">로그아웃</a></li>
     {% else %}
       <li><a href="{% url 'signup' %}">회원가입</a></li>
-      <li><a href="{% url 'login' %}">로그인</a></li>
+      <li><a href="{% url 'login' %}?next={{request.path}}">로그인</a></li>
     {% endif %}
     <!-- 로그인 연습용 끝 -->
     </ul>
