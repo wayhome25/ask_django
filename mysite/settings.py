@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*'] # 모든 도메인에 대해서 허용
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts',
     'dojo',
     'blog',
     'django.contrib.admin',
@@ -109,9 +110,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
@@ -126,3 +127,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 INTERNAL_IPS = ['127.0.0.1']
+
+# Auth settings
+
+# LOGIN_URL =
