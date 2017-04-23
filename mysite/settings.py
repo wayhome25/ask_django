@@ -129,5 +129,10 @@ STATIC_URL = '/static/'
 INTERNAL_IPS = ['127.0.0.1']
 
 # Auth settings
-
-# LOGIN_URL =
+# Auth Default setting (django.conf.settings)
+#
+# LOGIN_URL = '/accounts/login/'
+#
+LOGIN_REDIRECT_URL = '/blog/'
+#
+# LOGOUT_REDIRECT_URL = None

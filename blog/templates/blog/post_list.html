@@ -9,7 +9,18 @@
   </head>
   <body>
     <h1>AskDjango</h1>
-    <div>{{user.date_joined}}</div>
+    <!-- 로그인 연습용 -->
+    <ul>
+    {% if user.is_authenticated %}
+      <li>{{user}}님 안녕하세요!</li>
+      <li><a href="{% url 'profile' %}">프로필</a></li>
+      <li><a href="{% url 'logout' %}">로그아웃</a></li>
+    {% else %}
+      <li><a href="{% url 'signup' %}">회원가입</a></li>
+      <li><a href="{% url 'login' %}">로그인</a></li>
+    {% endif %}
+    <!-- 로그인 연습용 끝 -->
+    </ul>
     <p>안녕하세요. post_list 템플릿입니다.</p>
 
     <form action="" method="get">
